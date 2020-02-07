@@ -1,0 +1,91 @@
+html, body, #root {
+  height: 100%;
+  width: 100%;
+}
+body {
+  margin: 0;
+  background-color: rgba(0, 0, 0, .8);
+}
+.App {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+  color: white;
+}
+.App-header {
+  background-color: rgba(0, 0, 0, .4);
+}
+.content-container {
+  display: flex;
+  flex-direction: column;
+  margin: 0 30px 0 30px;
+}
+ul {
+  list-style: none;
+}
+li {
+  float: left;
+  margin: 10px;
+  border: solid 1px;
+  padding: 15px;
+}
+.content-mylist, .content-recommd {
+  display: flex;
+  flex-direction: column;
+}
+.mylist-items, .recommd-items {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+.mylist-item, .recommd-item {
+  position: relative;
+}
+.mylist-item + img, .recommd-item + img {
+  position: absolute;
+  height: 233px;
+  width: 166px;
+}
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 233px;
+  width: 166px;
+  background: rgba(0, 0, 0, 0);
+
+}
+.button {
+  position: absolute;
+  width: 166px;
+  height: 55px;
+  text-align: center;
+  top: 120px;
+  text-align: center;
+  opacity: 0;
+  font-size: 18px;
+  color: white;
+  border-radius: 5px;
+  background-color: rgb(40, 40, 40);
+  cursor: pointer;
+}
+.mylist-item:hover .overlay {
+  display: block;
+  background: rgba(0, 0, 0, .4);
+}
+.mylist-item:hover .button {
+  opacity: 0.8;
+}
+
+.recommd-item:hover .overlay {
+  display: block;
+  background: rgba(0, 0, 0, .4);
+}
+.recommd-item:hover .button {
+  opacity: 0.8;
+}
+
+
